@@ -1,0 +1,8 @@
+2021-07-01 22:09:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL " DROP TABLE IF EXISTS HOMEWORK.PRODUCTS CREATE[*] TABLE IF NOT EXISTS HOMEWORK.PRODUCTS (ID INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL, TITLE VARCHAR(255), COST FLOAT NOT NULL); INSERT INTO HOMEWORK.PRODUCTS (TITLE, COST) VALUES ('Product_1',125.23), ('Product_2',256.32), ('Product_3',1258.23), ('Product_4',125.36), ('Product_5',256.52); COMMIT;"
+Syntax error in SQL statement " DROP TABLE IF EXISTS HOMEWORK.PRODUCTS CREATE[*] TABLE IF NOT EXISTS HOMEWORK.PRODUCTS (ID INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL, TITLE VARCHAR(255), COST FLOAT NOT NULL); INSERT INTO HOMEWORK.PRODUCTS (TITLE, COST) VALUES ('Product_1',125.23), ('Product_2',256.32), ('Product_3',1258.23), ('Product_4',125.36), ('Product_5',256.52); COMMIT;"; SQL statement:
+ DROP TABLE IF EXISTS homework.products CREATE TABLE IF NOT EXISTS homework.products (id INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL, title VARCHAR(255), cost FLOAT NOT NULL); INSERT INTO homework.products (title, cost) VALUES ('Product_1',125.23), ('Product_2',256.32), ('Product_3',1258.23), ('Product_4',125.36), ('Product_5',256.52); COMMIT; [42000-200]
+2021-07-01 22:12:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "PRODUCTS" не найдена
+Table "PRODUCTS" not found; SQL statement:
+select product0_.id as id1_0_0_, product0_.cost as cost2_0_0_, product0_.title as title3_0_0_ from products product0_ where product0_.id=? [42102-200]
